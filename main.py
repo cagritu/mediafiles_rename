@@ -20,7 +20,7 @@ i=0
 for filename in os.listdir():
 
 	i=i+1
-	iStr=str(i).zfill(3)
+	iStr=str(i).zfill(4)
 	extension = pathlib.PurePosixPath(filename).suffix
 	error_flag=0	
 
