@@ -7,8 +7,10 @@ import exifread
 import pathlib	
 
 
-directoryInput = 'C:\\Users\\konko\\Python\\Project_Photo_Video_Rename\\Photos'
-extension_list = ['.JPG','.jpg','','.jpeg']
+
+directoryInput = 'G:\\Personal\\MO\\PerData\\Telefon\\sony\\100Andro\\part1'
+
+extension_list = ['.JPG','.jpg']
 prefix = ''	
 									#DCIM or BT
 os.chdir(directoryInput)
@@ -50,14 +52,16 @@ for filename in os.listdir():
 			try:
 				os.rename(filename, new_filename)
 			except FileExistsError:
-				print(iStr + "-" + filename + " -->  another file with new name already exist")
+				print(iStr + "-" + filename + " -->  another file with new name already exist.")
+			except PermissionError:
+				print(iStr + "-" + filename + " -->  Permission Error - Access Denied.")
 			except:
-				print(iStr + "-" + filename + " -->  unkown error")	
+				print(iStr + "-" + filename + " -->  unkown error.")	
 			else:
 				print(iStr + "-" + filename + "-- changed --> " + new_filename)
 
 		else:									#no need for name change
-			print(iStr + "-" + filename + " --> has correct naming")
+			print(iStr + "-" + filename + " --> has correct naming.")
 	else:										#extension is not expected.
-		print(iStr + "-" + filename + " --> has different extension")
+		print(iStr + "-" + filename + " --> has different extension.")
 	
