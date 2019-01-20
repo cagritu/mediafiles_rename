@@ -1,4 +1,4 @@
 # photo_rename
-Renames photos in a folder as YYYY_MM_DD__HH_MM_SS.*  
+Renames photos and videos in a folder as YYYY_MM_DD__HH_MM_SS.* with the metadata information of file.  
 
-Requires"exifread" module.
+Requires"exifread" and "exiftool" modules.
