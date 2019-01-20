@@ -38,7 +38,7 @@ directoryInput = 'C:\\Users\\konko\\Python\\Project_Photo_Video_Rename\\Videos'
 prefix = ''	 #DCIM or BT or blank
 i=0
 extension_photos = ['.JPG','.jpg']  
-extension_videos = [ '.mp4']
+extension_videos = [ '.mp4', '.MOV']
 extension_list = extension_photos + extension_videos 
 
 
